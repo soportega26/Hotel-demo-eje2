@@ -18,6 +18,7 @@
 
     <!-- BARRA DE NAVEGACIÓN LUXURY -->
     <nav class="luxury-nav">
+        
         <div class="nav-brand" onclick="showView('view-inicio')">AMHSA MARINA</div>
         <ul class="nav-links">
             <li><a href="javascript:void(0)" onclick="showView('view-inicio')">Inicio</a></li>
@@ -72,6 +73,34 @@
                 <button type="submit" class="btn-booking-search">CONSULTAR</button>
             </form>
         </div>
+        <section class="story-overlap-section reveal-on-scroll">
+            <div class="story-overlap-container">
+                
+                <!-- Imagen Decorativa Izquierda (Superior) -->
+                <div class="story-img-left">
+                    <img src="images/CASA_MARINA_LOBBY1.jpg" alt="Amhsa Marina Resort">
+                </div>
+
+                <!-- Tarjeta Central Flotante con la Reseña -->
+                <div class="story-card-box">
+                    <span class="story-subtitle">Nuestra Historia</span>
+                    <h2 class="story-heading">Hospitalidad & Tradición en el Caribe</h2>
+                    <p class="story-text">
+                        Es una empresa con experiencia en la industria turística que opera los hoteles todo incluido: <strong>Casa Marina Sosúa, Trademark by Wyndham All Inclusive</strong> y <strong>Select Sosúa Adults Only, Trademark by Wyndham All Inclusive</strong>, en Sosúa, Puerto Plata, República Dominicana.
+                    </p>
+                    <p class="story-text">
+                        Los hoteles ofrecen un servicio de hospitalidad completo enfocado en clientes que buscan entretenimiento y relajación en el mismo lugar.
+                    </p>
+                </div>
+
+                <!-- Imagen Decorativa Derecha (Inferior) -->
+                <div class="story-img-right">
+                    <img src="images/CASA_MARINA_MAIN_POOL.jpg" alt="Piscinas y Playas Amhsa Marina">
+                </div>
+
+            </div>
+        </section>
+        
 
         <!-- Seccion Editorial: Nuestra Historia / Reseña Institucional -->
         <section class="editorial-section">
@@ -95,21 +124,84 @@
                 </div>
             </div>
         </section>
-
-        <!-- Video de Presentación Destacado en Inicio -->
-        <section class="luxury-home-video-section">
-            <div class="luxury-page-header" style="padding-top: 20px;">
-                <span class="editorial-tag">EXPERIENCIA AUDIOVISUAL</span>
-                <h2 class="editorial-title">Descubre el Paraíso en Sosúa</h2>
-                <div class="editorial-divider"></div>
+        <!-- SECCIÓN SHOWCASE DE HABITACIONES DESTACADAS (FULL-WIDTH) -->
+        <section class="rooms-showcase-section reveal-on-scroll">
+            <div class="showcase-top-link">
+                <a href="#" onclick="showView('habitaciones')">VER TODAS LAS HABITACIONES &rarr;</a>
             </div>
 
-            <div class="luxury-video-box">
-                <video id="video-home" controls autoplay muted loop playsinline poster="images/CASA_MARINA_MAIN_POOL.jpg" preload="auto">
-                    <source src="images/Casa MArina all inclusive Video 1.mov" type="video/mp4">
-                    <source src="images/Casa MArina all inclusive Video 1.mov" type="video/quicktime">
-                    Tu navegador no soporta la reproducción de video.
-                </video>
+            <div class="showcase-banner">
+                <div class="showcase-overlay"></div>
+                
+                <div class="showcase-slides">
+                    <div class="showcase-slide active" style="background-image: url('images/STANDARD.jpg');">
+                        <div class="showcase-content">
+                            <h2 class="showcase-title">Superior Room</h2>
+                            <p class="showcase-desc">Equipadas con una cama King o dos camas dobles y un balcón o terraza privada, nuestras habitaciones superiores son el santuario ideal frente al mar.</p>
+                            <div class="showcase-buttons">
+                                <a href="#" onclick="showView('habitaciones')" class="btn-showcase-more">VER MÁS &rarr;</a>
+                                <a href="#reservas" class="btn-showcase-reserve">RESERVAR</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="showcase-slide" style="background-image: url('images/CASA_MARINA_DELUXE_ROOM_2BED.jpg');">
+                        <div class="showcase-content">
+                            <h2 class="showcase-title">Deluxe Vista Jardín</h2>
+                            <p class="showcase-desc">Exclusivas habitaciones remodeladas, diseñadas para brindar una estancia elegante y acogedora con mobiliario moderno.</p>
+                            <div class="showcase-buttons">
+                                <a href="#" onclick="showView('habitaciones')" class="btn-showcase-more">VER MÁS &rarr;</a>
+                                <a href="#reservas" class="btn-showcase-reserve">RESERVAR</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="showcase-slide" style="background-image: url('images/Premium OV SELECT.jpg');">
+                        <div class="showcase-content">
+                            <h2 class="showcase-title">Select Premium Vista Mar</h2>
+                            <p class="showcase-desc">Disfruta de vistas espectaculares al Océano Atlántico con amenidades VIP en área exclusiva para adultos.</p>
+                            <div class="showcase-buttons">
+                                <a href="#" onclick="showView('habitaciones')" class="btn-showcase-more">VER MÁS &rarr;</a>
+                                <a href="#reservas" class="btn-showcase-reserve">RESERVAR</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="showcase-controls">
+                    <button type="button" class="showcase-arrow" onclick="moveShowcaseSlide(-1)">&larr;</button>
+                    <button type="button" class="showcase-arrow" onclick="moveShowcaseSlide(1)">&rarr;</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Video de Presentación Destacado en Inicio -->
+         <!-- SECCIÓN DE BIENVENIDA CON VIDEO PROMOCIONAL -->
+        <section class="welcome-editorial-section reveal-on-scroll">
+            <div class="welcome-container">
+                <div class="welcome-text-content">
+                   
+                    <h2 class="welcome-title">Una Experiencia Inolvidable frente al Mar</h2>
+                    
+                    <p class="welcome-paragraph">
+                        Casa Marina Sosua by Wyndham es un complejo turístico «todo incluido» situado a 10 minutos del Aeropuerto de Puerto Plata. Establecimiento en una playa semiprivada con más de 500 metros de frente de mar cristalino.
+                    </p>
+
+                    <div class="welcome-badge">
+                        <h3>¿Listo para la Aventura?</h3>
+                        <p>Descubre nuestras exclusivas ofertas de temporada.</p>
+                       
+                    </div>
+                </div>
+
+                <div class="welcome-media-content">
+                    <div class="video-frame-wrapper">
+                        <video autoplay muted loop playsinline class="welcome-video-player">
+                            <source src="videos/Casa Marina y Select.mp4" type="video/mp4">
+                            Tu navegador no soporta el formato de video.
+                        </video>
+                    </div>
+                </div>
             </div>
         </section>
 
@@ -210,6 +302,7 @@
 
     <!-- ================= VISTA 3: GASTRONOMÍA ================= -->
     <div id="view-restaurantes" class="page-view" style="display: none;">
+        
         <header class="luxury-page-header">
             <span class="editorial-tag">EXPERIENCIA CULINARIA</span>
             <h1 class="editorial-title">Restaurantes & Bares</h1>
@@ -217,78 +310,130 @@
             <div class="editorial-divider"></div>
         </header>
 
-        <section class="suites-section">
+        <section class="gastronomy-section">
             <div class="suites-grid">
-                <article class="suite-card">
+                
+                <!-- Tarjeta 1: Hermann Cuisine -->
+                <article class="suite-card gastronomy-card">
                     <div class="suite-image-container" onclick="openLightbox('images/Hermann Restaurant.jpg', 'Hermann International Cuisine')">
-                        <img src="images/Hermann Restaurant.jpg" alt="Hermann Restaurant">
-                        <span class="suite-badge">A la Carta</span>
+                        <img src="images/Hermann Restaurant.jpg" alt="Hermann Restaurant Interior">
+                        <span class="suite-badge">A LA CARTA</span>
                     </div>
                     <div class="suite-details">
                         <h3>Hermann International Cuisine</h3>
                         <p class="suite-specs">Cocina Internacional · Menú Gourmet</p>
-                        <p class="suite-excerpt">Una elegante propuesta gastronómica a la carta ambientada con toques románticos y cava de vinos seleccionados.</p>
+                        <p class="suite-excerpt">Especialidad a la carta con una exquisita selección de cortes y platillos internacionales en una atmósfera íntima, distinguida y acogedora.</p>
+                        
+                        <!-- Lista de Servicios con Espaciado Editorial -->
+                        <ul class="gastronomy-features-list">
+                            <li><i class="fa-solid fa-utensils"></i> <span><strong>Servicio:</strong> Gourmet a la Carta</span></li>
+                            <li><a class="feature-item" style="color: inherit; text-decoration: none;"><i class="fa-solid fa-shirt"></i> <span><strong>Código de vestir:</strong> Casual Elegante</span></a></li>
+                            <li><i class="fa-solid fa-bell"></i> <span>Requiere reservación previa</span></li>
+                            <li><i class="fa-regular fa-clock"></i> <span><strong>Horario Cena:</strong> 6:30 PM - 10:00 PM</span></li>
+                            <li><i class="fa-solid fa-wine-glass"></i> <span>Selección de vinos y bebidas premium</span></li>
+                        </ul>
                     </div>
                 </article>
-                <article class="suite-card">
+                <article class="suite-card gastronomy-card">
                     <div class="suite-image-container" onclick="openLightbox('images/Hermann Restaurant.jpg', 'Hermann International Cuisine')">
-                        <img src="images/CASA_MARINA_EL_BATEY2.jpg" alt="Restaurante Batey">
-                        <span class="suite-badge">A la Carta</span>
+                        <img src="images/CASA_MARINA_EL_BATEY.jpg" alt="Hermann Restaurant Interior">
+                   
                     </div>
                     <div class="suite-details">
-                        <h3>Hermann International Cuisine</h3>
+                        <h3>El Batey Buffet Internacional</h3>
                         <p class="suite-specs">Cocina Internacional · Menú Gourmet</p>
-                        <p class="suite-excerpt">Una elegante propuesta gastronómica a la carta ambientada con toques románticos y cava de vinos seleccionados.</p>
+                        <p class="suite-excerpt">Variedad gastronómica diaria con estaciones de cocina en vivo, auténticas recetas dominicanas e internacionales frente a frondosos jardines tropicales.</p>
+                        
+                        <!-- Lista de Servicios con Espaciado Editorial -->
+                        <ul class="gastronomy-features-list">
+                            <li><i class="fa-solid fa-utensils"></i> <span><strong>Servicio:</strong> Gourmet a la Carta</span></li>
+                            <li><a class="feature-item" style="color: inherit; text-decoration: none;"><i class="fa-solid fa-shirt"></i> <span><strong>Código de vestir:</strong> Casual Elegante</span></a></li>
+                            <li><i class="fa-solid fa-bell"></i> <span>Requiere reservación previa</span></li>
+                            <li><i class="fa-regular fa-clock"></i> <span><strong>Horario Cena:</strong> 6:30 PM - 10:00 PM</span></li>
+                            <li><i class="fa-solid fa-wine-glass"></i> <span>Selección de vinos y bebidas premium</span></li>
+                        </ul>
                     </div>
                 </article>
-                <article class="suite-card">
+                <article class="suite-card gastronomy-card">
                     <div class="suite-image-container" onclick="openLightbox('images/Hermann Restaurant.jpg', 'Hermann International Cuisine')">
-                        <img src="images/CASA_MARINA_LUIGGI.jpg" alt="Restaurante Luiggi">
-                        <span class="suite-badge">A la Carta</span>
+                        <img src="images/CASA_MARINA_LUIGGI.jpg" alt="Hermann Restaurant Interior">
+                        <span class="suite-badge">A LA CARTA</span>
                     </div>
                     <div class="suite-details">
-                        <h3>Hermann International Cuisine</h3>
+                        <h3>Luiggi</h3>
                         <p class="suite-specs">Cocina Internacional · Menú Gourmet</p>
-                        <p class="suite-excerpt">Una elegante propuesta gastronómica a la carta ambientada con toques románticos y cava de vinos seleccionados.</p>
+                        <p class="suite-excerpt">Disfruta de cócteles tropicales y bebidas de primera categoría mientras admiras impresionantes atardeceres dorados sobre los acantilados del Caribe.</p>
+                        
+                        <!-- Lista de Servicios con Espaciado Editorial -->
+                        <ul class="gastronomy-features-list">
+                            <li><i class="fa-solid fa-utensils"></i> <span><strong>Servicio:</strong> Gourmet a la Carta</span></li>
+                            <li><a class="feature-item" style="color: inherit; text-decoration: none;"><i class="fa-solid fa-shirt"></i> <span><strong>Código de vestir:</strong> Casual Elegante</span></a></li>
+                            <li><i class="fa-solid fa-bell"></i> <span>Requiere reservación previa</span></li>
+                            <li><i class="fa-regular fa-clock"></i> <span><strong>Horario Cena:</strong> 6:30 PM - 10:00 PM</span></li>
+                            <li><i class="fa-solid fa-wine-glass"></i> <span>Selección de vinos y bebidas premium</span></li>
+                        </ul>
                     </div>
                 </article>
-                <article class="suite-card">
+                <article class="suite-card gastronomy-card">
                     <div class="suite-image-container" onclick="openLightbox('images/Hermann Restaurant.jpg', 'Hermann International Cuisine')">
-                        <img src="images/CASA_MARINA_EL_PASO.jpg" alt="Restaurante Tex Mex">
-                        <span class="suite-badge">A la Carta</span>
+                        <img src="images/CASA_MARINA_EL_PASO.jpg" alt="Hermann Restaurant Interior">
+                        <span class="suite-badge">A LA CARTA</span>
                     </div>
                     <div class="suite-details">
-                        <h3>Hermann International Cuisine</h3>
+                        <h3>Tex Mex</h3>
                         <p class="suite-specs">Cocina Internacional · Menú Gourmet</p>
-                        <p class="suite-excerpt">Una elegante propuesta gastronómica a la carta ambientada con toques románticos y cava de vinos seleccionados.</p>
+                        <p class="suite-excerpt">Variedad gastronómica diaria con estaciones de cocina en vivo, auténticas recetas dominicanas e internacionales frente a frondosos jardines tropicales.</p>
+                        
+                        <!-- Lista de Servicios con Espaciado Editorial -->
+                        <ul class="gastronomy-features-list">
+                            <li><i class="fa-solid fa-utensils"></i> <span><strong>Servicio:</strong> Gourmet a la Carta</span></li>
+                            <li><a class="feature-item" style="color: inherit; text-decoration: none;"><i class="fa-solid fa-shirt"></i> <span><strong>Código de vestir:</strong> Casual Elegante</span></a></li>
+                            <li><i class="fa-solid fa-bell"></i> <span>Requiere reservación previa</span></li>
+                            <li><i class="fa-regular fa-clock"></i> <span><strong>Horario Cena:</strong> 6:30 PM - 10:00 PM</span></li>
+                            <li><i class="fa-solid fa-wine-glass"></i> <span>Selección de vinos y bebidas premium</span></li>
+                        </ul>
                     </div>
                 </article>
-                <article class="suite-card">
-                    <div class="suite-image-container" onclick="openLightbox('images/Hermann Restaurant.jpg', 'Hermann International Cuisine')">
-                        <img src="images/CASA_MARINA_SEA_SCAPE.jpg" alt="Restaurante Sea Scape">
-                        <span class="suite-badge">A la Carta</span>
+
+
+                <!-- Tarjeta 2: Terraza frente al Mar -->
+                <article class="suite-card gastronomy-card">
+                    <div class="suite-image-container" onclick="openLightbox('images/CASA_MARINA_MAIN_POOL.jpg', 'Terraza al Aire Libre')">
+                        <img src="images/CASA_MARINA_SEA_SCAPE.jpg" alt="Terraza del Restaurante">
+                        <span class="suite-badge">VISTA AL MAR</span>
                     </div>
                     <div class="suite-details">
-                        <h3>Hermann International Cuisine</h3>
-                        <p class="suite-specs">Cocina Internacional · Menú Gourmet</p>
-                        <p class="suite-excerpt">Una elegante propuesta gastronómica a la carta ambientada con toques románticos y cava de vinos seleccionados.</p>
+                        <h3>Sea Scape</h3>
+                        <p class="suite-specs">Ambiente Exterior · Océano Atlántico</p>
+                        <p class="suite-excerpt">Disfruta de cócteles tropicales y bebidas de primera categoría mientras admiras impresionantes atardeceres dorados sobre los acantilados del Caribe.</p>
+                        
+                        <ul class="gastronomy-features-list">
+                            <li><i class="fa-solid fa-sun"></i> <span><strong>Ambiente:</strong> Terraza Panorámica</span></li>
+                            <li><i class="fa-solid fa-martini-glass-citrus"></i> <span>Coctelería de autor disponible</span></li>
+                            <li><i class="fa-solid fa-heart"></i> <span>Ideal para cenas románticas y parejas</span></li>
+                            <li><i class="fa-solid fa-music"></i> <span>Música ambiental en vivo algunas noches</span></li>
+                        </ul>
                     </div>
                 </article>
-                <article class="suite-card">
-                    <div class="suite-image-container" onclick="openLightbox('images/Hermann Restaurant.jpg', 'Hermann International Cuisine')">
-                        <img src="images/CASA_MARINA_EL_BATEY.jpg" alt="Restaurante Principal">
-                        <span class="suite-badge">A la Carta</span>
+
+                <!-- Tarjeta 3: Cava de Vinos & Experiencia Select -->
+                <article class="suite-card gastronomy-card">
+                    <div class="suite-image-container" onclick="openLightbox('images/SUPERIOR__PRIVEE ADULTS ONLY.jpg', 'Cava & Experiencia Gourmet Select')">
+                        <img src="images/Sport Bar (2).jpg" alt="Cava de Vinos">
+                        <span class="suite-badge">EXCLUSIVO SELECT</span>
                     </div>
                     <div class="suite-details">
-                        <h3>Hermann International Cuisine</h3>
-                        <p class="suite-specs">Cocina Internacional · Menú Gourmet</p>
-                        <p class="suite-excerpt">Una elegante propuesta gastronómica a la carta ambientada con toques románticos y cava de vinos seleccionados.</p>
+                        <h3>Sport Bar</h3>
+                      
+                        <p class="suite-excerpt">El sports bar del Select Sosúa Adults Only  forma parte de los beneficios exclusivos para los huéspedes hospedados en la sección Select. Este espacio ofrece bebidas, snacks y un ambiente relajado para ver transmisiones deportivas.</p>
+                        
+                        
                     </div>
                 </article>
+
             </div>
         </section>
     </div>
-
     <!-- ================= VISTA 4: GALERÍA DIVIDIDA ================= -->
     <div id="view-galeria" class="page-view" style="display: none;">
         <header class="luxury-page-header">
@@ -342,8 +487,7 @@
                 <div class="luxury-video-box">
                     <h3>Recorrido Audiovisual Casa Marina</h3>
                     <video id="video-casa-marina" controls autoplay muted loop playsinline poster="images/CASA_MARINA_MAIN_POOL.jpg" preload="auto">
-                        <source src="images/Casa MArina all inclusive Video 1.mov" type="video/mp4">
-                        <source src="images/Casa MArina all inclusive Video 1.mov" type="video/quicktime">
+                        <source src="videos/Casa Marina All Inclusive Video 1.mov" type="video/mp4">
                     </video>
                 </div>
             </div>
@@ -387,8 +531,7 @@
                 <div class="luxury-video-box">
                     <h3>Experiencia Exclusiva Select Adults Only</h3>
                     <video id="video-select-adults" controls autoplay muted loop playsinline poster="images/Junior Suite Swim up (3).jpg" preload="auto">
-                        <source src="images/Select Adults all inclusive Video 1.mov" type="video/mp4">
-                        <source src="images/Select Adults all inclusive Video 1.mov" type="video/quicktime">
+                       <source src="videos/Select Adults Only All Inclusive Video 1.mov" type="video/mp4">
                     </video>
                 </div>
             </div>
@@ -442,7 +585,7 @@
                 <ul>
                     <li><a href="javascript:void(0)" onclick="showView('view-habitaciones')">Casa Marina Sosúa</a></li>
                     <li><a href="javascript:void(0)" onclick="showView('view-habitaciones')">Select Sosúa Adults Only</a></li>
-                    <li><a href="javascript:void(0)" onclick="showView('view-restaurantes')">Hermann Cuisine</a></li>
+                    
                 </ul>
             </div>
         </div>

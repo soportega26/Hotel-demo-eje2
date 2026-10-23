@@ -613,3 +613,553 @@ h1, h2, h3, h4 {
     .luxury-nav { padding: 20px; }
     .nav-links { display: none; }
 }
+
+/* =========================================================
+   CORRECCIÓN Y ESPACIADO EDITORIAL PARA GASTRONOMÍA
+   ========================================================= */
+
+/* Fondo con patrón de marcas de agua temáticas para Gastronomía */
+#view-restaurantes {
+    background-color: #faf6f0 !important;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160' viewBox='0 0 100 100'%3E%3Cg stroke='%23c59b27' stroke-width='0.9' fill='none' stroke-linecap='round' stroke-linejoin='round' opacity='0.09'%3E%3C!-- Copa de Vino --%3E%3Cpath d='M25 15 L45 15 L45 35 C45 45 25 45 25 35 Z M35 45 L35 70 M25 70 L45 70'/%3E%3C!-- Cubiertos cruzados --%3E%3Cpath d='M70 15 L85 45 M85 15 L70 45 M77 45 L77 70'/%3E%3C/g%3E%3C/svg%3E") !important;
+    background-repeat: repeat;
+    background-size: 180px 180px;
+    padding-bottom: 80px;
+}
+
+/* Alineación limpia del encabezado */
+#view-restaurantes .luxury-page-header {
+    padding-top: 130px;
+    padding-bottom: 40px;
+    max-width: 850px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+#view-restaurantes .luxury-lead {
+    font-size: 1.05rem;
+    color: #555555;
+    line-height: 1.8;
+    margin-top: 15px;
+}
+
+.gastronomy-section {
+    padding: 10px 50px 80px 50px;
+    max-width: 1350px;
+    margin: 0 auto;
+}
+
+/* Ajuste de tarjeta y su contenedor interno */
+.gastronomy-card {
+    background-color: #ffffff !important;
+    border: 1px solid rgba(212, 184, 138, 0.3) !important;
+    box-shadow: 0 15px 35px rgba(26, 26, 26, 0.06) !important;
+    display: flex;
+    flex-direction: column;
+}
+
+.gastronomy-card .suite-details {
+    padding: 35px 30px !important;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.gastronomy-card h3 {
+    font-size: 1.7rem !important;
+    color: #1a1a1a;
+    margin-bottom: 6px;
+}
+
+.gastronomy-card .suite-excerpt {
+    font-size: 0.92rem;
+    color: #555555;
+    line-height: 1.7;
+    margin-bottom: 22px;
+}
+
+/* Lista de Servicios con Espaciado Holgado */
+.gastronomy-features-list {
+    list-style: none !important;
+    padding: 0 !important;
+    margin: 15px 0 0 0 !important;
+    border-top: 1px solid rgba(197, 155, 39, 0.2);
+    padding-top: 20px !important;
+}
+
+.gastronomy-features-list li {
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+    font-size: 0.88rem;
+    color: #444444;
+    line-height: 1.5;
+    margin-bottom: 14px !important; /* Espacio vertical claro entre cada servicio */
+}
+
+.gastronomy-features-list li:last-child {
+    margin-bottom: 0 !important;
+}
+
+.gastronomy-features-list i {
+    color: #c59b27; /* Dorado mate */
+    font-size: 1rem;
+    width: 20px;
+    text-align: center;
+    margin-top: 3px;
+    flex-shrink: 0;
+}
+
+.gastronomy-features-list strong {
+    color: #1a1a1a;
+    font-weight: 600;
+}
+
+/* =========================================================
+   SECCIÓN DE RESEÑA EDITORIAL CON FOTOS MÁS GRANDES E IMPACTANTES
+   ========================================================= */
+
+.story-overlap-section {
+    position: relative;
+    padding: 120px 20px; /* Mayor respiro vertical para acomodar fotos más grandes */
+    margin-top: 40px;
+    background-color: #fcfcfc;
+    overflow: hidden;
+}
+
+.story-overlap-container {
+    position: relative;
+    max-width: 1200px; /* Ligeramente más ancho para dar espacio a las fotos */
+    margin: 0 auto;
+    min-height: 580px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Imagen Izquierda: ¡Más grande y visible! */
+.story-img-left {
+    position: absolute;
+    top: -20px;
+    left: 20px;
+    width: 420px;  /* Ancho aumentado de 340px a 420px */
+    height: 460px; /* Altura aumentada para mayor impacto visual */
+    box-shadow: 0 20px 45px rgba(0, 0, 0, 0.18); /* Sombra más profunda */
+    z-index: 1;    /* Se mantiene por debajo de la tarjeta central */
+}
+
+.story-img-left img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Imagen Derecha: ¡Más grande y visible! */
+.story-img-right {
+    position: absolute;
+    bottom: -20px;
+    right: 20px;
+    width: 440px;  /* Ancho aumentado de 360px a 440px */
+    height: 420px; /* Altura aumentada */
+    box-shadow: 0 20px 45px rgba(0, 0, 0, 0.18);
+    z-index: 1;    /* Se mantiene por debajo de la tarjeta central */
+}
+
+.story-img-right img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Tarjeta Central con la Reseña (Se mantiene al frente con máxima elegancia) */
+.story-card-box {
+    position: relative;
+    z-index: 5;
+    background: #ffffff;
+    padding: 55px 65px;
+    max-width: 680px;
+    text-align: center;
+    box-shadow: 0 25px 55px rgba(13, 21, 39, 0.15);
+    border-radius: 2px;
+}
+
+.story-subtitle {
+    font-family: 'Great Vibes', 'Playfair Display', cursive, serif;
+    font-size: 2.6rem;
+    color: #E96310;
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 400;
+}
+
+.story-heading {
+    font-family: 'Playfair Display', serif;
+    font-size: 2rem;
+    color: #0d1527;
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+
+.story-text {
+    font-size: 0.98rem;
+    color: #555555;
+    line-height: 1.8;
+    margin-bottom: 15px;
+}
+
+/* Adaptación Responsiva para Celulares y Tablets */
+@media (max-width: 992px) {
+    .story-overlap-container {
+        flex-direction: column;
+        gap: 30px;
+        min-height: auto;
+    }
+
+    .story-img-left, 
+    .story-img-right {
+        position: relative;
+        top: auto;
+        left: auto;
+        right: auto;
+        bottom: auto;
+        width: 100%;
+        height: 300px; /* Fotos adaptadas y muy visibles en móviles */
+    }
+
+    .story-card-box {
+        padding: 30px 20px;
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+    }
+}
+
+
+/* =========================================================
+   SECCIÓN SHOWCASE DE HABITACIONES (ANCHO COMPLETO - INICIO)
+   ========================================================= */
+
+.rooms-showcase-section {
+    width: 100%;
+    margin-top: 50px;
+    margin-bottom: 60px;
+}
+
+/* Enlace Superior */
+.showcase-top-link {
+    text-align: center;
+    padding-bottom: 25px;
+}
+
+.showcase-top-link a {
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    color: #0d1527;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: color 0.3s ease;
+}
+
+.showcase-top-link a:hover {
+    color: #E96310; /* Naranja Amhsa */
+}
+
+/* Banner Principal de borde a borde (100vw) */
+.showcase-banner {
+    position: relative;
+    width: 100vw;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
+    height: 520px;
+    overflow: hidden;
+    background-color: #0d1527;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.showcase-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(13, 21, 39, 0.45); /* Capa oscura para legibilidad del texto */
+    z-index: 2;
+}
+
+.showcase-slides {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.showcase-slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    opacity: 0;
+    transition: opacity 0.8s ease-in-out;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.showcase-slide.active {
+    opacity: 1;
+}
+
+/* Contenido de texto superpuesto */
+.showcase-content {
+    position: relative;
+    z-index: 5;
+    text-align: center;
+    color: #ffffff;
+    max-width: 800px;
+    padding: 0 20px;
+    margin-top: 30px; /* Desciende ligeramente el texto para que no choque con el borde */
+}
+
+.showcase-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.8rem;
+    margin-bottom: 15px;
+    text-shadow: 0 4px 15px rgba(0, 0, 0, 0.6);
+}
+
+.showcase-desc {
+    font-size: 1.05rem;
+    line-height: 1.6;
+    margin-bottom: 30px;
+    color: rgba(255, 255, 255, 0.95);
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.6);
+}
+
+/* Botones centralizados */
+.showcase-buttons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.btn-showcase-more {
+    color: #ffffff !important;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 12px;
+    letter-spacing: 1.5px;
+    transition: color 0.3s;
+}
+
+.btn-showcase-more:hover {
+    color: #E96310 !important;
+}
+
+.btn-showcase-reserve {
+    border: 2px solid #ffffff;
+    background: transparent;
+    color: #ffffff !important;
+    padding: 10px 26px;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    text-decoration: none;
+    border-radius: 2px;
+    transition: all 0.3s ease;
+}
+
+.btn-showcase-reserve:hover {
+    background-color: #E96310;
+    border-color: #E96310;
+}
+
+/* Flechas de navegación inferior */
+.showcase-controls {
+    position: absolute;
+    bottom: 25px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10;
+    display: flex;
+    gap: 20px;
+}
+
+.showcase-arrow {
+    background: transparent;
+    border: none;
+    color: #ffffff;
+    font-size: 22px;
+    cursor: pointer;
+    opacity: 0.8;
+    transition: opacity 0.3s, transform 0.3s;
+}
+
+.showcase-arrow:hover {
+    opacity: 1;
+    transform: scale(1.2);
+    color: #E96310;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+    .showcase-banner {
+        height: 420px;
+    }
+    .showcase-title {
+        font-size: 2rem;
+    }
+    .showcase-desc {
+        font-size: 0.9rem;
+    }
+}
+
+/* =========================================================
+   SECCIÓN BIENVENIDA CON VIDEO PROMOCIONAL
+   ========================================================= */
+
+.welcome-editorial-section {
+    background-color: #ffffff;
+    padding: 80px 20px;
+}
+
+.welcome-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* 50% Texto / 50% Video */
+    gap: 60px;
+    align-items: center;
+}
+
+/* Columna de Texto */
+.welcome-subtitle {
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    color: #E96310 !important; /* Naranja Amhsa */
+    text-transform: uppercase;
+    display: block;
+    margin-bottom: 12px;
+}
+
+.welcome-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.6rem;
+    color: #0d1527;
+    margin-bottom: 20px;
+    line-height: 1.2;
+}
+
+.welcome-paragraph {
+    font-size: 1rem;
+    line-height: 1.7;
+    color: #555555;
+    margin-bottom: 25px;
+}
+
+.welcome-badge h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.3rem;
+    color: #E96310;
+    margin-bottom: 6px;
+}
+
+.welcome-badge p {
+    font-size: 0.95rem;
+    color: #666;
+    margin-bottom: 15px;
+}
+
+.welcome-btn {
+    padding: 12px 28px;
+    background-color: #0d1527 !important;
+    color: #ffffff !important;
+    border: none;
+    font-weight: 700;
+    font-size: 12px;
+    letter-spacing: 1.5px;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background 0.3s ease;
+}
+
+.welcome-btn:hover {
+    background-color: #E96310 !important;
+}
+
+/* Columna de Video Promocional */
+.welcome-media-content {
+    width: 100%;
+}
+
+.video-frame-wrapper {
+    width: 150%;
+    height: 700px; /* Tamaño ideal y muy proporcionado para el marco del video */
+    border-radius: 12px; /* Esquinas suavizadas elegables */
+    overflow: hidden;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.12); /* Sombra elegante */
+    background-color: #0d1527;
+}
+
+.welcome-video-player {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Asegura que el video llene el marco sin distorsionarse */
+    display: block;
+}
+
+/* Adaptación para dispositivos móviles */
+@media (max-width: 900px) {
+    .welcome-container {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+    
+    .video-frame-wrapper {
+        height: 280px;
+    }
+}
+
+.welcome-media-content { position: relative; }
+.image-stack-wrapper { position: relative; }
+
+.img-primary {
+    width: 100%;
+    height: 520px;
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+}
+
+.accent-image-card {
+    position: absolute;
+    bottom: -30px;
+    left: -40px;
+    width: 55%;
+    background: #ffffff;
+    padding: 8px;
+    border-radius: 8px;
+    box-shadow: 0 12px 30px rgba(0,0,0,0.15);
+}
+
+.img-secondary {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 6px;
+}
+
+.accent-badge-text {
+    display: block;
+    text-align: center;
+    padding-top: 6px;
+    font-size: 11px;
+    font-weight: 700;
+    color: #c99836;
+    text-transform: uppercase;
+}

@@ -113,3 +113,37 @@ function closeLightbox() {
 document.addEventListener('DOMContentLoaded', () => {
     showView('view-inicio');
 });
+let currentShowcaseIndex = 0;
+function moveShowcaseSlide(direction) {
+    const slides = document.querySelectorAll('.showcase-slide');
+    if (slides.length === 0) return;
+
+    slides[currentShowcaseIndex].classList.remove('active');
+    currentShowcaseIndex = (currentShowcaseIndex + direction + slides.length) % slides.length;
+    slides[currentShowcaseIndex].classList.add('active');
+}
+
+let currentDiningIndex = 0;
+function moveDiningSlide(direction) {
+    const slides = document.querySelectorAll('.dining-slide');
+    if (slides.length === 0) return;
+
+    slides[currentDiningIndex].classList.remove('active');
+    currentDiningIndex = (currentDiningIndex + direction + slides.length) % slides.length;
+    slides[currentDiningIndex].classList.add('active');
+}
+
+// Temporizadores automáticos para los banners de inicio
+setInterval(() => {
+    const showcaseSection = document.querySelector('.rooms-showcase-section');
+    if (showcaseSection && showcaseSection.offsetWidth > 0) {
+        moveShowcaseSlide(1);
+    }
+}, 5000);
+
+setInterval(() => {
+    const diningSection = document.querySelector('.dining-showcase-section');
+    if (diningSection && diningSection.offsetWidth > 0) {
+        moveDiningSlide(1);
+    }
+}, 6000);
